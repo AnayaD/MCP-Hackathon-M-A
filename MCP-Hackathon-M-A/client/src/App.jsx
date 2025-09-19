@@ -70,7 +70,7 @@ function AppContent({ user, onboardingComplete, onLogin, onOnboardingComplete })
       <Route 
         path="/chat" 
         element={
-          user && onboardingComplete ? (
+          user ? (
             <Chat user={user} />
           ) : (
             <Navigate to="/login" replace />

@@ -124,6 +124,54 @@ ${demoCardOffers.map((card, index) => `
 `).join('')}
 
 Would you like me to create a personalized timeline for any of these cards?`
+        } else if (input.toLowerCase().includes('when') && (input.toLowerCase().includes('buy') || input.toLowerCase().includes('apply'))) {
+          response = `**🎯 Optimal Timing for Credit Card Applications:**
+
+**Best Time to Apply:**
+- **January-March**: New year promotions, tax season spending
+- **September-November**: Holiday shopping preparation
+- **Avoid**: December (holiday rush), July-August (summer slowdown)
+
+**For Your Profile:**
+Based on your spending patterns, I recommend applying for the **Chase Sapphire Preferred** in **February 2025** because:
+
+1. **Tax Season Spending**: You'll likely have higher expenses for tax preparation
+2. **Spring Travel**: Perfect timing for your Paris trip planning
+3. **3-Month Window**: Gives you until May to meet the $4,000 minimum spend
+4. **Bonus Timing**: Points will be available just in time for summer travel booking
+
+**Application Strategy:**
+- Apply on a weekday morning (Tuesday-Thursday)
+- Have your income and employment info ready
+- Consider applying for 2 cards if you have high spending coming up
+
+Would you like me to create a detailed timeline for your specific goals?`
+        } else if (input.toLowerCase().includes('which') && input.toLowerCase().includes('card')) {
+          response = `**💳 Which Card Should You Choose?**
+
+Based on your spending analysis, here's my recommendation:
+
+**🥇 TOP CHOICE: Chase Sapphire Preferred**
+- **Why**: Perfect for your Paris trip goal
+- **Signup Bonus**: 80,000 points ($1,000+ value)
+- **Timeline**: Apply in February, earn bonus by May, book flights in June
+- **ROI**: 1,000% return on the $95 annual fee
+
+**🥈 SECOND CHOICE: American Express Gold Card**
+- **Why**: Maximizes your grocery and dining spend
+- **Signup Bonus**: 60,000 points ($1,200+ value)
+- **Best For**: If you prioritize everyday rewards over travel
+- **ROI**: 480% return on the $250 annual fee
+
+**🥉 THIRD CHOICE: Capital One Venture**
+- **Why**: Simple 2x points on everything
+- **Signup Bonus**: 75,000 points ($750 value)
+- **Best For**: If you want simplicity and flexibility
+- **ROI**: 789% return on the $95 annual fee
+
+**My Recommendation**: Start with Chase Sapphire Preferred for your Paris trip, then add Amex Gold 6 months later for everyday spending.
+
+Would you like me to create a detailed application timeline?`
         } else {
           response = `I'm here to help you optimize your credit card strategy! You can ask me about:
 - Planning for specific goals (trips, purchases)
