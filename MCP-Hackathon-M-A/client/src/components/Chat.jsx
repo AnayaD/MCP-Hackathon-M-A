@@ -28,6 +28,9 @@ const Chat = ({ user }) => {
     e.preventDefault()
     if (!input.trim() || loading) return
 
+    console.log('🔍 Chat handleSubmit called with input:', input)
+    console.log('🔍 User object:', user)
+
     const userMessage = {
       id: Date.now(),
       type: 'user',
@@ -40,12 +43,15 @@ const Chat = ({ user }) => {
     setLoading(true)
 
     try {
+      console.log('📡 Making API call to /api/chat/message')
       // Send message to LLM API
       const chatResponse = await axios.post('/api/chat/message', {
         message: input,
-        user_id: user.id,
-        context_id: user.context_id
+        user_id: user?.id || 'demo_user_123',
+        context_id: user?.context_id
       })
+      
+      console.log('✅ Chat API response:', chatResponse.data)
 
       let response = ''
       
@@ -287,6 +293,34 @@ What would you like to explore?`
             </button>
           </div>
         </form>
+
+        {/* Quick Test Buttons */}
+        <div className="mt-4 flex flex-wrap gap-2">
+          <button
+            onClick={() => setInput('When should I apply for a credit card?')}
+            className="px-3 py-1 text-xs bg-blue-100 text-blue-800 rounded-md hover:bg-blue-200"
+          >
+            Test: When to apply
+          </button>
+          <button
+            onClick={() => setInput('Which card should I choose?')}
+            className="px-3 py-1 text-xs bg-green-100 text-green-800 rounded-md hover:bg-green-200"
+          >
+            Test: Which card
+          </button>
+          <button
+            onClick={() => setInput('Plan my Paris trip')}
+            className="px-3 py-1 text-xs bg-purple-100 text-purple-800 rounded-md hover:bg-purple-200"
+          >
+            Test: Paris trip
+          </button>
+          <button
+            onClick={() => setInput('Show me my missed rewards')}
+            className="px-3 py-1 text-xs bg-red-100 text-red-800 rounded-md hover:bg-red-200"
+          >
+            Test: Missed rewards
+          </button>
+        </div>
 
         {/* Quick Actions */}
         <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
