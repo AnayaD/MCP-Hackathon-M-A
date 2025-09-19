@@ -10,16 +10,27 @@ const Dashboard = ({ user }) => {
 
   useEffect(() => {
     fetchDashboardData()
-  }, [])
+  }, [user])
 
   const fetchDashboardData = async () => {
+    console.log('🔍 Dashboard fetchDashboardData called with user:', user)
+    
+    if (!user || !user.id) {
+      console.error('❌ No user or user.id found:', user)
+      setMissedRewards(demoMissedRewards)
+      setLoading(false)
+      return
+    }
+
     try {
+      console.log('📡 Fetching missed rewards for user:', user.id)
       // Fetch missed rewards calculation
-      const rewardsResponse = await axios.post('/api/chat/calculate-rewards', {
+      const rewardsResponse = await axios.post('/api/data/calculate-rewards', {
         user_id: user.id,
         lookback_months: 12
       })
 
+      console.log('✅ Rewards response:', rewardsResponse.data)
       if (rewardsResponse.data.success) {
         setMissedRewards(rewardsResponse.data.calculation)
       } else {
@@ -27,8 +38,10 @@ const Dashboard = ({ user }) => {
         setMissedRewards(demoMissedRewards)
       }
 
+      console.log('📡 Fetching goals for user:', user.id)
       // Fetch goals
-      const goalsResponse = await axios.get('/api/data/goals')
+      const goalsResponse = await axios.get(`/api/data/goals/${user.id}`)
+      console.log('✅ Goals response:', goalsResponse.data)
       if (goalsResponse.data.success) {
         setGoals(goalsResponse.data.goals)
       }
