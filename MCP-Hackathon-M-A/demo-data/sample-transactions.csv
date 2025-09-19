@@ -1,0 +1,114 @@
+date,amount,merchant,category,card_id
+2024-08-21,57.42,Whole Foods,groceries,card_visa_1
+2024-08-20,23.50,Starbucks,dining,card_visa_1
+2024-08-19,89.99,Amazon,shopping,card_visa_1
+2024-08-18,45.20,Shell,gas,card_visa_1
+2024-08-17,156.78,Target,groceries,card_visa_1
+2024-08-16,34.50,Chipotle,dining,card_visa_1
+2024-08-15,78.90,Uber,transportation,card_visa_1
+2024-08-14,23.75,CVS Pharmacy,healthcare,card_visa_1
+2024-08-13,67.45,Safeway,groceries,card_visa_1
+2024-08-12,45.60,McDonald's,dining,card_visa_1
+2024-08-11,234.50,Best Buy,electronics,card_visa_1
+2024-08-10,89.99,Netflix,entertainment,card_visa_1
+2024-08-09,56.78,Costco,groceries,card_visa_1
+2024-08-08,23.40,Subway,dining,card_visa_1
+2024-08-07,123.45,Home Depot,home_improvement,card_visa_1
+2024-08-06,67.89,Trader Joe's,groceries,card_visa_1
+2024-08-05,34.20,Pizza Hut,dining,card_visa_1
+2024-08-04,45.60,Chevron,gas,card_visa_1
+2024-08-03,78.90,Spotify,entertainment,card_visa_1
+2024-08-02,156.78,Walmart,groceries,card_visa_1
+2024-08-01,23.50,Dunkin',dining,card_visa_1
+2024-07-31,89.99,Apple Store,electronics,card_visa_1
+2024-07-30,45.20,BP,gas,card_visa_1
+2024-07-29,67.45,Kroger,groceries,card_visa_1
+2024-07-28,34.50,Taco Bell,dining,card_visa_1
+2024-07-27,123.45,Lowe's,home_improvement,card_visa_1
+2024-07-26,56.78,Whole Foods,groceries,card_visa_1
+2024-07-25,23.40,KFC,dining,card_visa_1
+2024-07-24,78.90,Lyft,transportation,card_visa_1
+2024-07-23,45.60,Walgreens,healthcare,card_visa_1
+2024-07-22,156.78,Costco,groceries,card_visa_1
+2024-07-21,34.20,Burger King,dining,card_visa_1
+2024-07-20,67.89,Safeway,groceries,card_visa_1
+2024-07-19,23.75,Starbucks,dining,card_visa_1
+2024-07-18,89.99,Amazon,shopping,card_visa_1
+2024-07-17,45.20,Shell,gas,card_visa_1
+2024-07-16,123.45,Target,groceries,card_visa_1
+2024-07-15,56.78,Chipotle,dining,card_visa_1
+2024-07-14,34.50,Uber,transportation,card_visa_1
+2024-07-13,78.90,CVS Pharmacy,healthcare,card_visa_1
+2024-07-12,45.60,Trader Joe's,groceries,card_visa_1
+2024-07-11,156.78,McDonald's,dining,card_visa_1
+2024-07-10,23.40,Best Buy,electronics,card_visa_1
+2024-07-09,67.45,Netflix,entertainment,card_visa_1
+2024-07-08,89.99,Costco,groceries,card_visa_1
+2024-07-07,34.20,Subway,dining,card_visa_1
+2024-07-06,123.45,Home Depot,home_improvement,card_visa_1
+2024-07-05,56.78,Walmart,groceries,card_visa_1
+2024-07-04,23.50,Pizza Hut,dining,card_visa_1
+2024-07-03,78.90,Chevron,gas,card_visa_1
+2024-07-02,45.60,Spotify,entertainment,card_visa_1
+2024-07-01,156.78,Whole Foods,groceries,card_visa_1
+2024-06-30,34.50,Dunkin',dining,card_visa_1
+2024-06-29,67.89,Apple Store,electronics,card_visa_1
+2024-06-28,23.40,BP,gas,card_visa_1
+2024-06-27,89.99,Kroger,groceries,card_visa_1
+2024-06-26,45.20,Taco Bell,dining,card_visa_1
+2024-06-25,123.45,Lowe's,home_improvement,card_visa_1
+2024-06-24,56.78,Safeway,groceries,card_visa_1
+2024-06-23,34.50,KFC,dining,card_visa_1
+2024-06-22,78.90,Lyft,transportation,card_visa_1
+2024-06-21,45.60,Walgreens,healthcare,card_visa_1
+2024-06-20,156.78,Costco,groceries,card_visa_1
+2024-06-19,23.75,Burger King,dining,card_visa_1
+2024-06-18,67.45,Trader Joe's,groceries,card_visa_1
+2024-06-17,34.20,Starbucks,dining,card_visa_1
+2024-06-16,89.99,Amazon,shopping,card_visa_1
+2024-06-15,45.60,Shell,gas,card_visa_1
+2024-06-14,123.45,Target,groceries,card_visa_1
+2024-06-13,56.78,Chipotle,dining,card_visa_1
+2024-06-12,34.50,Uber,transportation,card_visa_1
+2024-06-11,78.90,CVS Pharmacy,healthcare,card_visa_1
+2024-06-10,45.60,Walmart,groceries,card_visa_1
+2024-06-09,156.78,McDonald's,dining,card_visa_1
+2024-06-08,23.40,Best Buy,electronics,card_visa_1
+2024-06-07,67.45,Netflix,entertainment,card_visa_1
+2024-06-06,89.99,Whole Foods,groceries,card_visa_1
+2024-06-05,34.20,Subway,dining,card_visa_1
+2024-06-04,123.45,Home Depot,home_improvement,card_visa_1
+2024-06-03,56.78,Costco,groceries,card_visa_1
+2024-06-02,23.50,Pizza Hut,dining,card_visa_1
+2024-06-01,78.90,Chevron,gas,card_visa_1
+2024-05-31,45.60,Spotify,entertainment,card_visa_1
+2024-05-30,156.78,Safeway,groceries,card_visa_1
+2024-05-29,34.50,Dunkin',dining,card_visa_1
+2024-05-28,67.89,Apple Store,electronics,card_visa_1
+2024-05-27,23.40,BP,gas,card_visa_1
+2024-05-26,89.99,Kroger,groceries,card_visa_1
+2024-05-25,45.20,Taco Bell,dining,card_visa_1
+2024-05-24,123.45,Lowe's,home_improvement,card_visa_1
+2024-05-23,56.78,Trader Joe's,groceries,card_visa_1
+2024-05-22,34.50,KFC,dining,card_visa_1
+2024-05-21,78.90,Lyft,transportation,card_visa_1
+2024-05-20,45.60,Walgreens,healthcare,card_visa_1
+2024-05-19,156.78,Walmart,groceries,card_visa_1
+2024-05-18,23.75,Burger King,dining,card_visa_1
+2024-05-17,67.45,Costco,groceries,card_visa_1
+2024-05-16,34.20,Starbucks,dining,card_visa_1
+2024-05-15,89.99,Amazon,shopping,card_visa_1
+2024-05-14,45.60,Shell,gas,card_visa_1
+2024-05-13,123.45,Target,groceries,card_visa_1
+2024-05-12,56.78,Chipotle,dining,card_visa_1
+2024-05-11,34.50,Uber,transportation,card_visa_1
+2024-05-10,78.90,CVS Pharmacy,healthcare,card_visa_1
+2024-05-09,45.60,Whole Foods,groceries,card_visa_1
+2024-05-08,156.78,McDonald's,dining,card_visa_1
+2024-05-07,23.40,Best Buy,electronics,card_visa_1
+2024-05-06,67.45,Netflix,entertainment,card_visa_1
+2024-05-05,89.99,Safeway,groceries,card_visa_1
+2024-05-04,34.20,Subway,dining,card_visa_1
+2024-05-03,123.45,Home Depot,home_improvement,card_visa_1
+2024-05-02,56.78,Costco,groceries,card_visa_1
+2024-05-01,23.50,Pizza Hut,dining,card_visa_1
