@@ -15,9 +15,12 @@ const Dashboard = ({ user }) => {
   const fetchDashboardData = async () => {
     console.log('🔍 Dashboard fetchDashboardData called with user:', user)
     
+    // Always start with demo data for immediate display
+    setMissedRewards(demoMissedRewards)
+    setGoals(demoGoals)
+    
     if (!user || !user.id) {
       console.error('❌ No user or user.id found:', user)
-      setMissedRewards(demoMissedRewards)
       setLoading(false)
       return
     }
@@ -31,24 +34,22 @@ const Dashboard = ({ user }) => {
       })
 
       console.log('✅ Rewards response:', rewardsResponse.data)
-      if (rewardsResponse.data.success) {
+      if (rewardsResponse.data.success && rewardsResponse.data.calculation.total_transactions > 0) {
         setMissedRewards(rewardsResponse.data.calculation)
-      } else {
-        // Use comprehensive demo data
-        setMissedRewards(demoMissedRewards)
       }
+      // Keep demo data if no real transactions
 
       console.log('📡 Fetching goals for user:', user.id)
       // Fetch goals
       const goalsResponse = await axios.get(`/api/data/goals/${user.id}`)
       console.log('✅ Goals response:', goalsResponse.data)
-      if (goalsResponse.data.success) {
+      if (goalsResponse.data.success && goalsResponse.data.goals.length > 0) {
         setGoals(goalsResponse.data.goals)
       }
+      // Keep demo goals if no real goals
     } catch (error) {
       console.error('Dashboard data fetch error:', error)
-      // Set comprehensive demo data on error
-      setMissedRewards(demoMissedRewards)
+      // Demo data is already set, so just continue
     } finally {
       setLoading(false)
     }
@@ -192,6 +193,100 @@ const Dashboard = ({ user }) => {
                 No transaction data available. Upload your transactions to see analysis.
               </div>
             )}
+          </div>
+        </div>
+
+        {/* Credit Card Recommendations */}
+        <div className="mb-8">
+          <div className="bg-white rounded-lg shadow p-6">
+            <h2 className="text-xl font-semibold text-gray-900 mb-4">Recommended Credit Cards</h2>
+            <p className="text-gray-600 mb-6">Based on your spending patterns, these cards could maximize your rewards:</p>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow">
+                <div className="flex justify-between items-start mb-3">
+                  <h3 className="font-semibold text-gray-900">American Express Gold Card</h3>
+                  <span className="text-xs bg-yellow-100 text-yellow-800 px-2 py-1 rounded-full">4x Dining</span>
+                </div>
+                <div className="space-y-2 text-sm">
+                  <div className="flex justify-between">
+                    <span className="text-gray-600">Sign-up Bonus:</span>
+                    <span className="font-medium">60,000 points</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-gray-600">Min Spend:</span>
+                    <span>$4,000 in 6 months</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-gray-600">Annual Fee:</span>
+                    <span>$250</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-gray-600">Potential Savings:</span>
+                    <span className="font-medium text-green-600">$450/year</span>
+                  </div>
+                </div>
+                <button className="w-full mt-4 bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 text-sm">
+                  Apply Now
+                </button>
+              </div>
+
+              <div className="border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow">
+                <div className="flex justify-between items-start mb-3">
+                  <h3 className="font-semibold text-gray-900">Chase Sapphire Preferred</h3>
+                  <span className="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded-full">2x Travel</span>
+                </div>
+                <div className="space-y-2 text-sm">
+                  <div className="flex justify-between">
+                    <span className="text-gray-600">Sign-up Bonus:</span>
+                    <span className="font-medium">80,000 points</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-gray-600">Min Spend:</span>
+                    <span>$4,000 in 3 months</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-gray-600">Annual Fee:</span>
+                    <span>$95</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-gray-600">Potential Savings:</span>
+                    <span className="font-medium text-green-600">$320/year</span>
+                  </div>
+                </div>
+                <button className="w-full mt-4 bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 text-sm">
+                  Apply Now
+                </button>
+              </div>
+
+              <div className="border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow">
+                <div className="flex justify-between items-start mb-3">
+                  <h3 className="font-semibold text-gray-900">Capital One Venture</h3>
+                  <span className="text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full">2x Everything</span>
+                </div>
+                <div className="space-y-2 text-sm">
+                  <div className="flex justify-between">
+                    <span className="text-gray-600">Sign-up Bonus:</span>
+                    <span className="font-medium">75,000 points</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-gray-600">Min Spend:</span>
+                    <span>$4,000 in 3 months</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-gray-600">Annual Fee:</span>
+                    <span>$95</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-gray-600">Potential Savings:</span>
+                    <span className="font-medium text-green-600">$480/year</span>
+                  </div>
+                </div>
+                <button className="w-full mt-4 bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 text-sm">
+                  Apply Now
+                </button>
+              </div>
+            </div>
           </div>
         </div>
 
