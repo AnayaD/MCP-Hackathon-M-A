@@ -5,6 +5,7 @@ import Onboarding from './components/Onboarding'
 import Dashboard from './components/Dashboard'
 import Chat from './components/Chat'
 import TestLogin from './components/TestLogin'
+import ChatTest from './components/ChatTest'
 import './App.css'
 
 // Wrapper component to handle redirects
@@ -80,6 +81,10 @@ function AppContent({ user, onboardingComplete, onLogin, onOnboardingComplete })
       <Route 
         path="/test" 
         element={<TestLogin />} 
+      />
+      <Route 
+        path="/chat-test" 
+        element={<ChatTest />} 
       />
     </Routes>
   )

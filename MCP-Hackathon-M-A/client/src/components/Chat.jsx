@@ -216,6 +216,16 @@ What would you like to explore?`
 
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col">
+      {/* Debug info */}
+      <div className="bg-yellow-100 border-l-4 border-yellow-500 p-4 mb-4">
+        <div className="flex">
+          <div className="ml-3">
+            <p className="text-sm text-yellow-700">
+              <strong>Debug:</strong> Chat component loaded. User: {user ? user.id : 'No user'}
+            </p>
+          </div>
+        </div>
+      </div>
       {/* Header */}
       <div className="bg-white shadow">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
