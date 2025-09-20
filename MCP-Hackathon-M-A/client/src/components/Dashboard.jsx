@@ -108,12 +108,20 @@ const Dashboard = ({ user }) => {
               <h1 className="text-2xl font-bold text-gray-900">Chronos Dashboard</h1>
               <p className="text-gray-600">Welcome back, {user.name}</p>
             </div>
-            <Link
-              to="/chat"
-              className="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700"
-            >
-              Start Planning
-            </Link>
+            <div className="flex space-x-3">
+              <Link
+                to="/simple-chat"
+                className="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700"
+              >
+                Start Planning
+              </Link>
+              <Link
+                to="/simple-chat"
+                className="bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700"
+              >
+                🚀 Direct Chat
+              </Link>
+            </div>
           </div>
         </div>
       </div>
@@ -355,7 +363,7 @@ const Dashboard = ({ user }) => {
               Chat with Chronos to create your personalized credit card strategy
             </p>
             <Link
-              to="/chat"
+              to="/simple-chat"
               className="block w-full bg-indigo-600 text-white py-2 px-4 rounded-md hover:bg-indigo-700 text-center"
             >
               Start Chat
